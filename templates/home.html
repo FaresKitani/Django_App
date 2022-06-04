@@ -9,9 +9,14 @@
 
             <form action="add" method="POST">
                 {% csrf_token %}
-                Enter 1st number : <input type="text" name="num1"> <br>
-                Enter 2st number : <input type="text" name="num2"> <br>
+                Enter 1st number : <input type="text" name="num1" value="0"> <br>
+                Enter 2st number : <input type="text" name="num2" value="0"> <br>
                 <input type="submit">
+
+            </form>
+            <form action="index" >
+                
+                <input type="submit" value="Index">
 
             </form>
         {% endblock %}
