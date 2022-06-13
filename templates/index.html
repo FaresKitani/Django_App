@@ -35,8 +35,8 @@
 									<ul class="d-flex flex-row align-items-start justify-content-start">
 										<li class="active"><a href="index.html">Home</a></li>
 										<li><a href="about.html">About us</a></li>
-										<li><a href="#">Services</a></li>
-										<li><a href="news.html">News</a></li>
+										<li><a href="accounts/register">register</a></li>
+										<li><a href="accounts/login">logIn</a></li>
 										<li><a href="contact.html">Contact</a></li>
 									</ul>
 								</nav>
@@ -285,9 +285,18 @@
 							<!-- Destination -->
 				{% for dest in dests %}
 							<div class="destination item">
+								
 								<div class="destination_image">
+									<!-- static img
 									<img src="{{baseUrl}}/{{dest.img}}" alt="">
+									-->
+									<img src="{{dest.img.url}}" alt="imge">
+									{%if dest.offer %}
+									<div class="spec_offer text-center"><a href="#">Special Offer</a></div>
+									{% endif  %}
 								</div>
+								
+
 								<div class="destination_content">
 									<div class="destination_title"><a href="destinations.html">{{dest.name}}</a></div>
 									<div class="destination_subtitle">
@@ -295,6 +304,7 @@
 									</div>
 									<div class="destination_price">From $ {{dest.price}}</div>
 								</div>
+
 							</div>
 
 				{% endfor %}
